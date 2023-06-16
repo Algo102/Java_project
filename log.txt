@@ -1,0 +1,26 @@
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: element: 3
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: element: 8
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: element: 7
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: element: 6
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: element: 7
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: element: 7
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: element: 1
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: element: 3
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: element: 6
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: element: 2
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+WARNING: logger off
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+INFO: test
+θών. 16, 2023 12:39:33 AM Seminar.Sem3.T2_0_Logger main
+WARNING: logsPath

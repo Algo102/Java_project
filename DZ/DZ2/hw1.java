@@ -32,7 +32,7 @@ public class hw1 {
       String value = keyValue[1].replace("\"", ""); // Избавляемся от \"
 
       if (!value.equalsIgnoreCase("null")) {// Если значение не равно null
-        if(flag==false)
+        if(flag==false) //(!flag)
           res.append(" AND ");
         res.append(key).append("=").append(value);
         flag = false; // После первого вхождения меняется на false, и перед следующим входжением добавляется AND

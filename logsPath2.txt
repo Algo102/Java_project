@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-06-15T19:50:59.561941Z</date>
+  <millis>1686858659561</millis>
+  <nanos>941000</nanos>
+  <sequence>0</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>element: 5</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.638902200Z</date>
+  <millis>1686858659638</millis>
+  <nanos>902200</nanos>
+  <sequence>1</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>element: 2</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.647892300Z</date>
+  <millis>1686858659647</millis>
+  <nanos>892300</nanos>
+  <sequence>2</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>element: 5</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.651891700Z</date>
+  <millis>1686858659651</millis>
+  <nanos>891700</nanos>
+  <sequence>3</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>element: 4</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.658886300Z</date>
+  <millis>1686858659658</millis>
+  <nanos>886300</nanos>
+  <sequence>4</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>element: 7</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.664882700Z</date>
+  <millis>1686858659664</millis>
+  <nanos>882700</nanos>
+  <sequence>5</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>element: 4</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.669879800Z</date>
+  <millis>1686858659669</millis>
+  <nanos>879800</nanos>
+  <sequence>6</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>element: 6</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.673879600Z</date>
+  <millis>1686858659673</millis>
+  <nanos>879600</nanos>
+  <sequence>7</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>element: 4</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.675878400Z</date>
+  <millis>1686858659675</millis>
+  <nanos>878400</nanos>
+  <sequence>8</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>element: 9</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.680874500Z</date>
+  <millis>1686858659680</millis>
+  <nanos>874500</nanos>
+  <sequence>9</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>element: 0</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.683871400Z</date>
+  <millis>1686858659683</millis>
+  <nanos>871400</nanos>
+  <sequence>10</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>WARNING</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>logger off</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.686871400Z</date>
+  <millis>1686858659686</millis>
+  <nanos>871400</nanos>
+  <sequence>11</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>INFO</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>test</message>
+</record>
+<record>
+  <date>2023-06-15T19:50:59.691867700Z</date>
+  <millis>1686858659691</millis>
+  <nanos>867700</nanos>
+  <sequence>12</sequence>
+  <logger>Seminar.Sem3.T2_1_Logger</logger>
+  <level>WARNING</level>
+  <class>Seminar.Sem3.T2_1_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>logsPath</message>
+</record>
+</log>
