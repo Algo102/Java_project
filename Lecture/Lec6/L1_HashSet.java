@@ -2,6 +2,11 @@ package Lecture.Lec6;
 
 import java.util.*;
 
+// SETы - множества с уникальными значениями
+// HashSet - заполнение рандомом по Hesh-у
+// TreeSet - заполнение в отсортированном виде
+// LinkedHashSet - заполнение в порядке добавления
+
 public class L1_HashSet {
     public static void main(String[] args) {
         Set<Integer> set = new HashSet<>();

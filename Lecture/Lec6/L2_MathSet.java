@@ -16,6 +16,6 @@ public class L2_MathSet {
         System.out.println(r); // [2, 3, 5, 7]
         System.out.println(s); // [1, 4, 6]
 
-        System.out.println(a.addAll(b)); // true // ЧТО ЗНАЧИТ ЭТА СТРОЧКА
+        System.out.println(a.addAll(b)); // true // То что операция прошла успешно
     }
 }
