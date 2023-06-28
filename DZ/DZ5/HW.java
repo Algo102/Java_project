@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.TreeMap;
 
 public class HW {
   public static void main(String[] args) {
@@ -39,6 +38,7 @@ public class HW {
             book.put(name, userN);
           }
           break;
+          
         case "2":
           System.out.println(book);
 
@@ -51,13 +51,16 @@ public class HW {
           }
 
           break;
+
         case "3":
           flag = false;
           break;
+
         default:
           System.out.println("Сделайте правильный выбор ((( ");          
           break;
       }
     }
+    sc.close();
   }
 }
