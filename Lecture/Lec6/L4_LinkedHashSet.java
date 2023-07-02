@@ -2,6 +2,7 @@ package Lecture.Lec6;
 
 import java.util.*;
 
+
 public class L4_LinkedHashSet {
     public static void main(String[] args) {
         var a = new LinkedHashSet<>(Arrays.asList(1,7,2,3,6,4,5));

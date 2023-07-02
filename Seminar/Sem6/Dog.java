@@ -16,6 +16,9 @@ public class Dog {
     this.poroda = poroda;
   }
 
+  public Dog() {
+  }
+
   public String getName(){
     return name;
   }
