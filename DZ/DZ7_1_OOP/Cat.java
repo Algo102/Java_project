@@ -2,7 +2,7 @@ package DZ.DZ7_1_OOP;
 
 public class Cat extends Animal{
 
-  public Cat(int id, String name, int age, String color, boolean vaccin, Owner owner) {
+  public Cat(String id, String name, int age, String color, boolean vaccin, Owner owner) {
     super(id, name, age, color, vaccin, owner);
     //TODO Auto-generated constructor stub
   }
