@@ -19,7 +19,7 @@ public class WildCat extends WildAnimal implements Runnable {
 
     @Override
     public int run() {
-        System.out.println("Бегает со скоростью 15 км/ч");
+        System.out.println(CLASS_NAME + "Бегает со скоростью 15 км/ч");
         return 15;
     }
 }

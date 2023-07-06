@@ -2,7 +2,9 @@ package Seminar.Sem8_2_OOP;
 
 import Seminar.Sem8_2_OOP.core.clients.Animal;
 import Seminar.Sem8_2_OOP.core.clients.home.impl.Cat;
+import Seminar.Sem8_2_OOP.core.clients.home.impl.Dog;
 import Seminar.Sem8_2_OOP.core.clients.owners.Owner;
+import Seminar.Sem8_2_OOP.core.clients.wild.impl.WildCat;
 
 import java.time.LocalDate;
 
@@ -17,14 +19,16 @@ import java.time.LocalDate;
  */
 public class Main {
     public static void main(String[] args) {
-        Cat homeCat =
-                new Cat(2, "Tom", 4, LocalDate.of(2022, 4,13), new Owner("Ivanov Ivan"));
+        Cat homeCat = new Cat(2, "Tom", 4, LocalDate.of(2022, 4,13), new Owner("Ivanov Ivan"));
 
-        Seminar.Sem8_2_OOP.core.clients.wild.impl.WildCat wildCat =
-                new Seminar.Sem8_2_OOP.core.clients.wild.impl.WildCat(
-                        1, 4, LocalDate.of(2023, 1, 5), new Owner("incognito"));
+        WildCat wildCat = new WildCat(1, 4, LocalDate.of(2023, 1, 5), new Owner("incognito"));
 
         homeCat.hunt();
         wildCat.hunt();
+
+        Dog dog = new Dog();
+        dog.setName("Barbos");
+        System.out.println(homeCat);
+        System.out.println(dog);
     }
 }

@@ -13,14 +13,15 @@ public class VetClinic {
     public static void main(String[] args) {
         Human human = new Human("Пайтон");
         Cat cat = new Cat(0, null, 0, null, null);
-        // animals.add(human);
+        // Так создали интерфейс Анималс и имплементировали в WildAnimals и Pet, для того чтоб только их можно было лечить, соответственно лечить людей больше не можем
+        //animals.add(human);
         animals.add(cat);
         for (Animals element: animals) {
             heal(element);
         }    
     }
     private static void heal(Animals patients) {
-        System.out.println(patients.getClassName() + "вылечен");
+        System.out.println(patients.getClassName() + " вылечен");
     }  
 }
 
