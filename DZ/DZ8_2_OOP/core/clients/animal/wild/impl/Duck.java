@@ -11,7 +11,7 @@ import DZ.DZ8_2_OOP.core.clients.actionsAnimal.specifics.OnTheWater;
 import DZ.DZ8_2_OOP.core.clients.animal.wild.WildAnimal;
 import DZ.DZ8_2_OOP.core.clients.owners.Owner;
 
-public class Duck extends WildAnimal implements Flyable, Runnable, Soundable, OnTheWater, Dives {
+public class Duck extends WildAnimal implements Flyable, Runnable, Soundable, Dives {
     public Duck() {
     }
 
@@ -37,15 +37,6 @@ public class Duck extends WildAnimal implements Flyable, Runnable, Soundable, On
         return 2;
     }
 
-  
-
-    @Override
-    public int swimOnWater() {
-        System.out.println(CLASS_NAME + "плывет со скоростью: 2 км/ч");
-        return 2;
-    }
-
-    // Не знаю как отключить главный интерфейс
     @Override
     public int swim() {
         System.out.println(CLASS_NAME + "плывет со скоростью: 2 км/ч");

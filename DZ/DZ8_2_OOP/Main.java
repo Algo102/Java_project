@@ -1,12 +1,18 @@
 package DZ.DZ8_2_OOP;
 
+import DZ.DZ8_2_OOP.core.VetClinic;
 import DZ.DZ8_2_OOP.core.clients.Animal;
+import DZ.DZ8_2_OOP.core.clients.animal.home.impl.Bird;
 import DZ.DZ8_2_OOP.core.clients.animal.home.impl.Cat;
 import DZ.DZ8_2_OOP.core.clients.animal.home.impl.Dog;
+import DZ.DZ8_2_OOP.core.clients.animal.wild.impl.Duck;
+import DZ.DZ8_2_OOP.core.clients.animal.wild.impl.Snake;
 import DZ.DZ8_2_OOP.core.clients.animal.wild.impl.WildCat;
 import DZ.DZ8_2_OOP.core.clients.owners.Owner;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  Небольшая шпаргалка по синтаксису java:
@@ -23,15 +29,42 @@ public class Main {
 
         WildCat wildCat = new WildCat(1, 4, LocalDate.of(2023, 1, 5), new Owner("incognito"));
 
-        homeCat.hunt();
-        wildCat.hunt();
-
+        //homeCat.hunt();
+        // wildCat.hunt();
 
         Dog dog = new Dog();
         //dog.setName("Barbos");
-        System.out.println(homeCat);
-        System.out.println(dog);
+        // System.out.println(homeCat);
+        // System.out.println(dog);
 
-        wildCat.jump();
+        //wildCat.jump();
+
+        Bird bird1 = new Bird(0, null, 0, null, null);
+        Cat cat1 = new Cat(0, "Maks", 0, null, null);
+        Dog dog1 = new Dog(0, null, 0, null, null);
+        Duck duck1 = new Duck(0, 0, null, null);
+        Snake snake1 = new Snake(0, 0, null, null);
+        WildCat wildCat1 = new WildCat(0, 0, null, null);
+
+        List<Animal> allAnimals = new ArrayList<>();
+        allAnimals.add(homeCat);
+        allAnimals.add(wildCat);
+        allAnimals.add(dog);
+        allAnimals.add(bird1);
+        allAnimals.add(cat1);
+        allAnimals.add(dog1);
+        allAnimals.add(duck1);
+        allAnimals.add(snake1);
+        allAnimals.add(wildCat1);
+        
+        VetClinic.runnableAllAnimals(allAnimals);
+        System.out.println("------------------------");
+        VetClinic.flyableAllAnimals(allAnimals);
+        System.out.println("------------------------");
+        VetClinic.soundableAllAnimals(allAnimals);
+        System.out.println("------------------------");
+        VetClinic.swimableAllAnimals(allAnimals);
+
+        
     }
 }

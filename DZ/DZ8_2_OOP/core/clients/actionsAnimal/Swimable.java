@@ -1,5 +1,5 @@
 package DZ.DZ8_2_OOP.core.clients.actionsAnimal;
 
-public abstract interface Swimable {
+public interface Swimable {
   int swim();
 }

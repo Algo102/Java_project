@@ -7,6 +7,7 @@ import DZ.DZ8_2_OOP.core.clients.supports.Record;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -37,6 +38,22 @@ public abstract class Animal {
     protected void addRecord(Record record) {
         //todo реализовать
     }
+
+    //private static List<Animals> animals = new ArrayList<>(); 
+
+    public List<Animal> getRunnable() {
+        List<Animal> animals = new ArrayList<>();
+        for (Animal item: animals) {
+            if (item instanceof Runnable) animals.add(item);
+        }
+         return animals;
+    }
+
+    // private static void heal(Animals patients) {
+    //     System.out.println(patients.getClassName() + " вылечен");
+    // }  
+
+
 
     // Здесь не должно быть этих методов, т.к. не все умеют летать. Комментируем т.к. создали интерфейс
     //public void fly() {
@@ -128,17 +145,19 @@ public abstract class Animal {
         this.records = records;
     }
     @Override
-        public String toString() {
-            return CLASS_NAME + "{" +
-                    "id=" + id +
-                    ", name='" + name + '\'' +
-                    ", numberOfLimbs=" + numberOfLimbs +
-                    ", registrationDate=" + registrationDate +
-                    ", owner=" + owner +
-                    ", records=" + records +
-                    '}';
-        }
+    public String toString() {
+        return CLASS_NAME + "{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", numberOfLimbs=" + numberOfLimbs +
+                ", registrationDate=" + registrationDate +
+                ", owner=" + owner +
+                ", records=" + records +
+                '}';
+    }
     public String getClassName() {
         return this.CLASS_NAME;
-    }    
+    }
+    
+    
 }
