@@ -1,4 +1,4 @@
-package Seminar.Sem9_3_OOP.core.clients.wild;
+package Seminar.Sem9_3_OOP.core.clients.animal.wild;
 
 import Seminar.Sem9_3_OOP.core.clients.Animal;
 import Seminar.Sem9_3_OOP.core.clients.Animals;
@@ -17,10 +17,7 @@ public class WildAnimal extends Animal implements Animals {
     public WildAnimal() {
     }
 
-// Зачем нам конструктор с параметром reсords, если в родительском классе в конструкторе этот параметр отсутствует?
-//    private WildAnimal(int id, String name, int numberOfLimbs, LocalDate registrationDate, Owner owner, List<Record> records) {
-//        super(id, name, numberOfLimbs, registrationDate, owner);
-//    }
+    
 
     public WildAnimal(int id, int numberOfLimbs, LocalDate registrationDate, Owner owner) {
         this.id = id;
@@ -29,6 +26,10 @@ public class WildAnimal extends Animal implements Animals {
         this.registrationDate = registrationDate;
         this.owner = owner;
         this.records = new ArrayList<>();
+    }
+
+    protected WildAnimal(int id, String name, int numberOfLimbs, LocalDate registrationDate, Owner owner, List<Record> records) {
+        super(id, name, numberOfLimbs, registrationDate, owner);
     }
 
 }

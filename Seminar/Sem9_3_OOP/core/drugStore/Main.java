@@ -1,7 +1,7 @@
 package Seminar.Sem9_3_OOP.core.drugStore;
 
 import org.w3c.dom.ls.LSSerializer;
-import Seminar.Sem9_3_OOP.core.clients.DoctorSpecialities;
+//import Seminar.Sem9_3_OOP.core.personal.DoctorSpecialities;
 import Seminar.Sem9_3_OOP.core.personal.Doctor;
 
 import java.io.Serializable;
@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import static Seminar.Sem9_3_OOP.core.clients.DoctorSpecialities.THERAPIST;
+//import static Seminar.Sem9_3_OOP.core.personal.DoctorSpecialities.THERAPIST;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,8 +23,8 @@ public class Main {
 //        Интерфейс Serializable - отвечает за сериализацию объектов. Превращает объект в массив байтов, который потом
 //        можно собрать обратно при помощи десериализатора.
 
-        List<Marker> markers = new ArrayList<>();
-        Doctor doc1 = new Doctor(234, "Петрович", THERAPIST, "8(495)429-43-23");
+        // List<Marker> markers = new ArrayList<>();
+        // Doctor doc1 = new Doctor(234, "Петрович", THERAPIST, "8(495)429-43-23");
 //        markers.add().add();
 
 //        while (((Iterator<Component>) pharmacy1).hasNext()){
@@ -37,6 +37,7 @@ public class Main {
         for (Component elem : pharmacy1) {
             System.out.println(elem);
         }
+        
 
         Pharmacy pharmacy2 = new Pharmacy();
         Component comp3 = new Component("Penicillin", "10 mg", 3);

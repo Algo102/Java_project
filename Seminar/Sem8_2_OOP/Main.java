@@ -30,5 +30,6 @@ public class Main {
         dog.setName("Barbos");
         System.out.println(homeCat);
         System.out.println(dog);
+        
     }
 }

@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ComponentIterator implements Iterator<Component> {
+    
     List<Component> components = new ArrayList<>();
     int componentsCount = 0;
     public Component next() {

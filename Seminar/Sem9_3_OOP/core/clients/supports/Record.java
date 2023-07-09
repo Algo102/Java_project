@@ -1,5 +1,6 @@
 package Seminar.Sem9_3_OOP.core.clients.supports;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -7,9 +8,9 @@ import java.util.Date;
  */
 public class Record {
     private String record;
-    private Date date;
+    private LocalDate date;
 
-    public Record(String record, Date date) {
+    public Record(String record, LocalDate date) {
         this.record = record;
         this.date = date;
     }
@@ -22,11 +23,11 @@ public class Record {
         this.record = record;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 

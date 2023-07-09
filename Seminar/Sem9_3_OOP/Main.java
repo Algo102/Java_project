@@ -1,14 +1,18 @@
 package Seminar.Sem9_3_OOP;
 
-import Seminar.Sem9_3_OOP.core.clients.home.impl.Cat;
-import Seminar.Sem9_3_OOP.core.clients.home.impl.Dog;
+import Seminar.Sem9_3_OOP.core.VetClinic;
+import Seminar.Sem9_3_OOP.core.clients.Animal;
+import Seminar.Sem9_3_OOP.core.clients.animal.home.impl.Bird;
+import Seminar.Sem9_3_OOP.core.clients.animal.home.impl.Cat;
+import Seminar.Sem9_3_OOP.core.clients.animal.home.impl.Dog;
+import Seminar.Sem9_3_OOP.core.clients.animal.wild.impl.Duck;
+import Seminar.Sem9_3_OOP.core.clients.animal.wild.impl.Snake;
+import Seminar.Sem9_3_OOP.core.clients.animal.wild.impl.WildCat;
 import Seminar.Sem9_3_OOP.core.clients.owners.Owner;
-import Seminar.Sem9_3_OOP.core.clients.wild.impl.Duck;
-import Seminar.Sem9_3_OOP.core.clients.wild.impl.WildCat;
 
 import java.time.LocalDate;
-import java.lang.Class;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  Небольшая шпаргалка по синтаксису java:
@@ -20,31 +24,47 @@ import java.util.Arrays;
  -! Если логика классов внутри пакета не позволяет назвать все в одно существительное, надо вложить один пакет в другой.
  */
 public class Main {
-    public static void main(String[] args) throws ClassNotFoundException {
-        Cat homeCat =
-                new Cat(2, "Tom", 4, LocalDate.of(2022, 4,13), new Owner("Ivanov Ivan"));
+    public static void main(String[] args) {
+        Cat homeCat = new Cat(2, "Tom", 4, LocalDate.of(2022, 4,13), new Owner("Ivanov Ivan"));
 
-        WildCat wildCat =
-                new WildCat(
-                        1, 4, LocalDate.of(2023, 1, 5), new Owner("incognito"));
+        WildCat wildCat = new WildCat(1, 4, LocalDate.of(2023, 1, 5), new Owner("incognito"));
 
-        homeCat.hunt();
-        wildCat.hunt();
+        //homeCat.hunt();
+        // wildCat.hunt();
 
         Dog dog = new Dog();
-        dog.setName("Barbos");
+        //dog.setName("Barbos");
+        // System.out.println(homeCat);
+        // System.out.println(dog);
 
-        System.out.println(homeCat);
-        System.out.println(dog);
+        //wildCat.jump();
 
-        Duck duck = new Duck();
-        System.out.println(duck);
-        String typeOfElements;
-        typeOfElements = String.valueOf(Class.forName(String.valueOf(duck.getClass().getInterfaces()[0].getTypeName())));
-        System.out.println(typeOfElements);
-        if (typeOfElements.contains("Flyable")) {
-            System.out.println("Утка бегает");
-        }
-        System.out.println(Arrays.asList(duck.getClass().getInterfaces()));
-        }
+        Bird bird1 = new Bird(0, null, 0, null, null);
+        Cat cat1 = new Cat(0, "Maks", 0, null, null);
+        Dog dog1 = new Dog(0, null, 0, null, null);
+        Duck duck1 = new Duck(0, 0, null, null);
+        Snake snake1 = new Snake(0, 0, null, null);
+        WildCat wildCat1 = new WildCat(0, 0, null, null);
+
+        List<Animal> allAnimals = new ArrayList<>();
+        allAnimals.add(homeCat);
+        allAnimals.add(wildCat);
+        allAnimals.add(dog);
+        allAnimals.add(bird1);
+        allAnimals.add(cat1);
+        allAnimals.add(dog1);
+        allAnimals.add(duck1);
+        allAnimals.add(snake1);
+        allAnimals.add(wildCat1);
+        
+        VetClinic.runnableAllAnimals(allAnimals);
+        System.out.println("------------------------");
+        VetClinic.flyableAllAnimals(allAnimals);
+        System.out.println("------------------------");
+        VetClinic.soundableAllAnimals(allAnimals);
+        System.out.println("------------------------");
+        VetClinic.swimableAllAnimals(allAnimals);
+
+        
     }
+}

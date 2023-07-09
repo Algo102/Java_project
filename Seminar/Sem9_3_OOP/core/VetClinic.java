@@ -1,168 +1,82 @@
 package Seminar.Sem9_3_OOP.core;
 
-
-import org.w3c.dom.ls.LSOutput;
-import Seminar.Sem9_3_OOP.core.clients.Animal;
-import Seminar.Sem9_3_OOP.core.clients.Animals;
-import Seminar.Sem9_3_OOP.core.clients.Runnable;
-import Seminar.Sem9_3_OOP.core.clients.home.impl.*;
-import Seminar.Sem9_3_OOP.core.clients.owners.Owner;
-import Seminar.Sem9_3_OOP.core.clients.wild.impl.Duck;
-import Seminar.Sem9_3_OOP.core.clients.wild.impl.Snake;
-import Seminar.Sem9_3_OOP.core.clients.wild.impl.WildCat;
-
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
+import Seminar.Sem9_3_OOP.core.clients.Animal;
+import Seminar.Sem9_3_OOP.core.clients.Animals;
+import Seminar.Sem9_3_OOP.core.clients.Human;
+import Seminar.Sem9_3_OOP.core.clients.actionsAnimal.Flyable;
+import Seminar.Sem9_3_OOP.core.clients.actionsAnimal.Runnable;
+import Seminar.Sem9_3_OOP.core.clients.actionsAnimal.Soundable;
+import Seminar.Sem9_3_OOP.core.clients.actionsAnimal.Swimable;
+import Seminar.Sem9_3_OOP.core.clients.animal.home.impl.Cat;
+
 public class VetClinic {
-    private static int clientsCounter;
-    private static int ownersCounter;
-    private static List<Animal> animals;
+    private static List<Animals> animals = new ArrayList<>(); 
 
-    private static List<Animal> owners;
+    private static void heal(Animals patients) {
+        System.out.println(patients.getClassName() + " вылечен");
+    } 
 
-    static {
-        clientsCounter = 0;
-        ownersCounter = 0;
-        animals = new ArrayList<>();
-        owners = new ArrayList<>();
+    
+    public static void runnableAllAnimals(List<Animal> allAnimals){
+        List<Animal> curentList = new ArrayList<>();
+        for (int i = 0; i < allAnimals.size(); i++) {
+            if (allAnimals.get(i) instanceof Runnable) {
+                curentList.add(allAnimals.get(i)); 
+            } 
+        }
+        System.out.println(curentList);
     }
 
+    public static void flyableAllAnimals(List<Animal> allAnimals){
+        List<Animal> curentList = new ArrayList<>();
+        for (int i = 0; i < allAnimals.size(); i++) {
+            if (allAnimals.get(i) instanceof Flyable) {
+                curentList.add(allAnimals.get(i)); 
+            } 
+        }
+        System.out.println(curentList);
+    }
+
+    public static void soundableAllAnimals(List<Animal> allAnimals){
+        List<Animal> curentList = new ArrayList<>();
+        for (int i = 0; i < allAnimals.size(); i++) {
+            if (allAnimals.get(i) instanceof Soundable) {
+                curentList.add(allAnimals.get(i)); 
+            } 
+        }
+        System.out.println(curentList);
+    }
+
+     public static void swimableAllAnimals(List<Animal> allAnimals){
+        List<Animal> curentList = new ArrayList<>();
+        for (int i = 0; i < allAnimals.size(); i++) {
+            if (allAnimals.get(i) instanceof Swimable) {
+                curentList.add(allAnimals.get(i)); 
+            } 
+        }
+        System.out.println(curentList);
+    }
+  
     public static void main(String[] args) {
-//        Human human = new Human("Пайтон");
+        Human human = new Human("Пайтон");
+        Cat cat = new Cat(0, null, 0, null, null);
+        // Так создали интерфейс Анималс и имплементировали в WildAnimals и Pet, для того чтоб только их можно было лечить, соответственно лечить людей больше не можем
+        //animals.add(human);
+        animals.add(cat);
+        for (Animals element: animals) {
+            heal(element);
+        } 
 
-        Cat fadei = new Cat(++clientsCounter, "Фадей", 4, LocalDate.of(2017, 3,
-                17), null);
-        Dog sebastyan = new Dog(++clientsCounter, "Себастьян", 4, LocalDate.of(2008, 12,
-                11), null);
+        
 
-        Owner kalashnikovaTB = new Owner("Калашникова Татьяна Борисовна");
-        kalashnikovaTB.setPet(fadei);
-        kalashnikovaTB.setPet(sebastyan);
+        
+        
 
-        fadei.setOwner(kalashnikovaTB);
-        sebastyan.setOwner(kalashnikovaTB);
-
-        System.out.println(fadei);
-        System.out.println(sebastyan);
-        animals.add(fadei);
-        animals.add(sebastyan);
-
-        AquaFish agata = new AquaFish();
-        System.out.println(agata);
-        agata.setId(++clientsCounter);
-        agata.setName("Агата");
-        agata.setOwner(new Owner("Окунев Владимир Пескаревич"));
-        agata.setNumberOfLimbs(7);
-        agata.setRegistrationDate(LocalDate.of(2013, 12, 31));
-        System.out.println(agata);
-        animals.add(agata);
-
-        Parrot pirat = new Parrot(++clientsCounter, "Пират", 4, LocalDate.of(2020, 7,
-                19), agata.getOwner());
-        System.out.println(pirat);
-        animals.add(pirat);
-
-        Chicken clava = new Chicken(++clientsCounter, "Клава", 4, LocalDate.of(2018, 4,
-                15), new Owner("Афанасьева Тамара Кондратьевна"));
-        System.out.println(clava);
-        animals.add(clava);
-
-        Duck wildDuck1 = new Duck(++clientsCounter, 4, LocalDate.of(2023, 1,
-                22), clava.getOwner());
-        System.out.println(wildDuck1);
-        animals.add(wildDuck1);
-
-        Snake python1 = new Snake(++clientsCounter, 0, LocalDate.of(2019, 8, 31),
-                new Owner("Бесстрашный Владлен Перфильевич"));
-        System.out.println(python1);
-        animals.add(python1);
-
-        WildCat wildCat1 = new WildCat(++clientsCounter, 3, LocalDate.of(2019, 8,
-                31), python1.getOwner());
-        System.out.println(wildCat1);
-        animals.add(wildCat1);
-
-        System.out.println("\nНАШИ ПАЦИЕНТЫ: ");
-        printPatients(animals);
-        System.out.println("\nНАШИ БЕГАЮЩИЕ ПАЦИЕНТЫ: ");
-        System.out.println(animals.get(0).getClass().getInterfaces()[0]);
-        LinkedList<Animal> runningPatients = getRunnable();
-        printPatients(runningPatients);
-        System.out.println("\nНАШИ ПЛАВАЮЩИЕ ПАЦИЕНТЫ: ");
-        LinkedList<Animal> swimmingPatients = getSwimable();
-        printPatients(swimmingPatients);
-        System.out.println("\nНАШИ ЛЕТАЮЩИЕ ПАЦИЕНТЫ: ");
-        LinkedList<Animal> flyingPatients = getFlyable();
-        printPatients(flyingPatients);
-        System.out.println("\nНАШИ ПАЦИЕНТЫ, ИЗДАЮЩИЕ ЗВУКИ: ");
-        LinkedList<Animal> soundingPatients = getSoundable();
-        printPatients(soundingPatients);
-
-//        System.out.println(runningPatients);
-
-//        animals.add(human);
-//        animals.add(cat);
-//        for (Animals elem: animals) {
-//            heal(elem);
-//        }
+        
     }
-
-    static LinkedList<Animal> getRunnable() {
-        LinkedList<Animal> result = new LinkedList<>();
-        for (Animal patient: animals) {
-            for (int i = 0; i < patient.getClass().getInterfaces().length; i++) {
-                if (patient.getClass().getInterfaces()[i].toString().endsWith("Runnable")) {
-                    result.add(patient);
-                }
-            }
-        }
-        return result;
-    }
-    static LinkedList<Animal> getSwimable() {
-        LinkedList<Animal> result = new LinkedList<>();
-        for (Animal patient: animals) {
-            for (int i = 0; i < patient.getClass().getInterfaces().length; i++) {
-                if (patient.getClass().getInterfaces()[i].toString().endsWith("Swimable")) {
-                    result.add(patient);
-                }
-            }
-        }
-        return result;
-    }
-    static LinkedList<Animal> getFlyable() {
-        LinkedList<Animal> result = new LinkedList<>();
-        for (Animal patient: animals) {
-            for (int i = 0; i < patient.getClass().getInterfaces().length; i++) {
-                if (patient.getClass().getInterfaces()[i].toString().endsWith("Flyable")) {
-                    result.add(patient);
-                }
-            }
-        }
-        return result;
-    }
-    static LinkedList<Animal> getSoundable() {
-        LinkedList<Animal> result = new LinkedList<>();
-        for (Animal patient: animals) {
-            for (int i = 0; i < patient.getClass().getInterfaces().length; i++) {
-                if (patient.getClass().getInterfaces()[i].toString().endsWith("Soundable")) {
-                    result.add(patient);
-                }
-            }
-        }
-        return result;
-    }
-    static void printPatients (List<Animal> patients) {
-        for (Animal item: patients) {
-            System.out.println(item);
-        }
-    }
-
-//    private static void heal (Animals patient) {
-//
-//        System.out.println(patient.getClassName() + " вылечен");
-//    }
+ 
 }
+
